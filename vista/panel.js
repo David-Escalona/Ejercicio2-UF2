@@ -1,7 +1,7 @@
 export const panel = {
     template: 
     `
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="es">
     <head>
         <!-- Required meta tags -->
@@ -83,5 +83,14 @@ export const panel = {
 
     script: ()=>{
         console.log('Hola')
+        document.querySelector('#registro').addEventListener('click', () =>{
+            document.querySelector('header').innerHTML = registro.template
+        })
+        document.querySelector('#panel').addEventListener('click', () =>{
+            document.querySelector('header').innerHTML = panel.template
+        })
+        document.querySelector('#login').addEventListener('click', () =>{
+            document.querySelector('header').innerHTML = login.template
+        })
     }
 }

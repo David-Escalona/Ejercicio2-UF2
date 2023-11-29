@@ -1,6 +1,8 @@
+import { panel } from "./panel"
+import { registro } from "./registro"
 
 export const login = {
-    template: 
+    template: //html
     `
     <!DOCTYPE html>
     <html lang="es">
@@ -62,9 +64,9 @@ export const login = {
                             </label>
                         </div>
                         <a class="d-block text-end" href="#">¿Has olvidado tu contraseña?</a>
-                        <a id="login" class="btn btn-primary w-100 mt-3" href="#">Iniciar sesión</a>
+                        <button id="enlace" class="btn btn-primary w-100 mt-3">Iniciar sesión</button>
                     </form>
-                    <a class="d-block mt-5 btn btn-secondary mx-auto" href="#"
+                    <a id="registrarme" class="d-block mt-5 btn btn-secondary mx-auto"
                         >¿Eres nuevo? Regístrate</a
                     >
                 </div>
@@ -103,5 +105,20 @@ export const login = {
 
     script: ()=>{
         console.log('Hola')
+        document.querySelector('#enlace').addEventListener('click', () =>{
+            document.querySelector('header').innerHTML = panel.template
+        })
+        document.querySelector('#registrarme').addEventListener('click', () =>{
+            document.querySelector('header').innerHTML = registro.template
+        })
+        document.querySelector('#registro').addEventListener('click', () =>{
+            document.querySelector('header').innerHTML = registro.template
+        })
+        document.querySelector('#panel').addEventListener('click', () =>{
+            document.querySelector('header').innerHTML = panel.template
+        })
+        document.querySelector('#login').addEventListener('click', () =>{
+            document.querySelector('header').innerHTML = login.template
+        })
     }
 }

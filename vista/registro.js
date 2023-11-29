@@ -54,7 +54,7 @@ export const registro = {
                             <input id="email" type="text" class="form-control" />
                             <label for="pass" class="form-label mt-3">Contraseña:</label>
                             <input id="pass" type="password" class="form-control" />
-                            <a id="enlace" class="btn btn-primary w-100 mt-3" href="#">Enviar</a>
+                            <a id="enviar" class="btn btn-primary w-100 mt-3">Enviar</a>
                         </form>
                     </div>
                 </div>
@@ -90,8 +90,17 @@ export const registro = {
 
     script: ()=>{
         console.log('Hola')
-        document.querySelector('#enlace').addEventListener('click', () =>{
-            document.querySelector('main').innerHTML = login.template
+        document.querySelector('#enviar').addEventListener('click', () =>{
+            document.querySelector('header').innerHTML = login.template
+        })
+        document.querySelector('#registro').addEventListener('click', () =>{
+            document.querySelector('header').innerHTML = registro.template
+        })
+        document.querySelector('#panel').addEventListener('click', () =>{
+            document.querySelector('header').innerHTML = panel.template
+        })
+        document.querySelector('#login').addEventListener('click', () =>{
+            document.querySelector('header').innerHTML = login.template
         })
     }
 }

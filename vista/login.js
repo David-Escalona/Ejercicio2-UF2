@@ -2,8 +2,8 @@
 export const login = {
     template: 
     `
-<!DOCTYPE html>
-<html lang="es">
+    <!DOCTYPE html>
+    <html lang="es">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
@@ -32,12 +32,12 @@ export const login = {
         <title>Login</title>
     </head>
     <body class="pt-5" style="overflow-x: hidden; padding-bottom: 100px">
-        <header>
-        <h1>Gestió d'incidències FPLLEFIA</h1>
-        <form>
-            <button id="registro" type="submit" class="btn btn-primary">Registro</button>
-            <button id="panel" type="submit" class="btn btn-primary">Panel</button>
-            <button id="login" type="submit" class="btn btn-primary">Login</button>
+        <header class="container mt-3 ">
+        <h1 class="text-center">Gestió d'incidències FPLLEFIA</h1>
+        <form class="text-center">
+            <button id="registro" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Registro</button>
+            <button id="panel" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Panel</button>
+            <button id="login" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Login</button>
         </form>
         </header>
         <main>

@@ -1,4 +1,5 @@
-import { login } from "../vista/login"
+import { login } from "./login"
+import { panel } from "./panel"
 
 export const registro = {
     template: 
@@ -33,12 +34,12 @@ export const registro = {
         <title>Login</title>
     </head>
     <body class="pt-5" style="overflow-x: hidden; padding-bottom: 100px">
-        <header class="container mt-3 ">
+        <header class="container mt-3">
         <h1 class="text-center">Gestió d'incidències FPLLEFIA</h1>
         <form class="text-center">
-            <button id="registro" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Registro</button>
-            <button id="panel" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Panel</button>
-            <button id="login" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Login</button>
+            <button id="registroRegistro" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Registro</button>
+            <button id="panelRegistro" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Panel</button>
+            <button id="loginRegistro" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Login</button>
         </form>
             </header>
             <main>
@@ -54,7 +55,7 @@ export const registro = {
                             <input id="email" type="text" class="form-control" />
                             <label for="pass" class="form-label mt-3">Contraseña:</label>
                             <input id="pass" type="password" class="form-control" />
-                            <a id="enviar" class="btn btn-primary w-100 mt-3">Enviar</a>
+                            <button id="enlaceRegistro" class="btn btn-primary w-100 mt-3">Enviar</button>
                         </form>
                     </div>
                 </div>
@@ -64,7 +65,7 @@ export const registro = {
                     <div class="container">
                         <a class="navbar-brand" href="http://www.fpllefia.com">
                             <img
-                                src=".images/logo.svg"
+                                src="./images/logo.svg"
                                 alt="fpllefia"
                                 width="30"
                                 height="24"
@@ -90,17 +91,17 @@ export const registro = {
 
     script: ()=>{
         console.log('Hola')
-        document.querySelector('#enviar').addEventListener('click', () =>{
-            document.querySelector('header').innerHTML = login.template
-        })
-        document.querySelector('#registro').addEventListener('click', () =>{
+        document.querySelector('#registroRegistro').addEventListener('click', () =>{
             document.querySelector('header').innerHTML = registro.template
         })
-        document.querySelector('#panel').addEventListener('click', () =>{
+        document.querySelector('#panelregistro').addEventListener('click', () =>{
             document.querySelector('header').innerHTML = panel.template
         })
-        document.querySelector('#login').addEventListener('click', () =>{
+        document.querySelector('#loginRegistro').addEventListener('click', () =>{
             document.querySelector('header').innerHTML = login.template
+        })
+        document.querySelector('#enlaceRegistro').addEventListener('click', () =>{
+            document.querySelector('header').innerHTML = panel.template
         })
     }
 }

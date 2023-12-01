@@ -2,7 +2,7 @@ import { panel } from "./panel"
 import { registro } from "./registro"
 
 export const login = {
-    template: //html
+    template:
     `
     <!DOCTYPE html>
     <html lang="es">
@@ -37,9 +37,9 @@ export const login = {
         <header class="container mt-3 ">
         <h1 class="text-center">Gestió d'incidències FPLLEFIA</h1>
         <form class="text-center">
-            <button id="registro" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Registro</button>
-            <button id="panel" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Panel</button>
-            <button id="login" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Login</button>
+            <button id="registroLogin" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Registro</button>
+            <button id="panelLogin" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Panel</button>
+            <button id="loginLogin" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Login</button>
         </form>
         </header>
         <main>
@@ -64,10 +64,10 @@ export const login = {
                             </label>
                         </div>
                         <a class="d-block text-end" href="#">¿Has olvidado tu contraseña?</a>
-                        <button id="enlace" class="btn btn-primary w-100 mt-3">Iniciar sesión</button>
+                        <button id="enlaceLogin" class="btn btn-primary w-100 mt-3">Iniciar sesión</button>
                     </form>
-                    <a id="registrarme" class="d-block mt-5 btn btn-secondary mx-auto"
-                        >¿Eres nuevo? Regístrate</a
+                    <button id="registrarmeRegistrarme" class="d-block mt-5 btn btn-secondary mx-auto"
+                        >¿Eres nuevo? Regístrate</button
                     >
                 </div>
             </div>
@@ -77,7 +77,7 @@ export const login = {
                 <div class="container">
                     <a class="navbar-brand" href="http://www.fpllefia.com">
                         <img
-                            src=".images/logo.svg"
+                            src="./images/logo.svg"
                             alt="fpllefia"
                             width="30"
                             height="24"
@@ -105,20 +105,20 @@ export const login = {
 
     script: ()=>{
         console.log('Hola')
-        document.querySelector('#enlace').addEventListener('click', () =>{
-            document.querySelector('header').innerHTML = panel.template
-        })
-        document.querySelector('#registrarme').addEventListener('click', () =>{
+        document.querySelector('#registroLogin').addEventListener('click', () =>{
             document.querySelector('header').innerHTML = registro.template
         })
-        document.querySelector('#registro').addEventListener('click', () =>{
-            document.querySelector('header').innerHTML = registro.template
-        })
-        document.querySelector('#panel').addEventListener('click', () =>{
+        document.querySelector('#panelLogin').addEventListener('click', () =>{
             document.querySelector('header').innerHTML = panel.template
         })
-        document.querySelector('#login').addEventListener('click', () =>{
+        document.querySelector('#loginLogin').addEventListener('click', () =>{
             document.querySelector('header').innerHTML = login.template
+        })
+        document.querySelector('#enlaceLogin').addEventListener('click', () =>{
+            document.querySelector('header').innerHTML = panel.template
+        })
+        document.querySelector('#registrarmeRegistrarme').addEventListener('click', () =>{
+            document.querySelector('header').innerHTML = registro.template
         })
     }
 }

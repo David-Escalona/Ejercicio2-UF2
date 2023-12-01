@@ -1,3 +1,6 @@
+import { login } from "./login"
+import { registro } from "./registro"
+
 export const panel = {
     template: 
     `
@@ -34,9 +37,9 @@ export const panel = {
         <header class="container mt-3 ">
         <h1 class="text-center">Gestió d'incidències FPLLEFIA</h1>
         <form class="text-center">
-            <button id="registro" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Registro</button>
-            <button id="panel" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Panel</button>
-            <button id="login" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Login</button>
+            <button id="registroPanel" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Registro</button>
+            <button id="panelPanel" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Panel</button>
+            <button id="loginPanel" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Login</button>
         </form>
             </header>
             <main>
@@ -44,7 +47,7 @@ export const panel = {
                     <h1 class="mt-5 text-center fw-bold" style="font-size: 100px;">Vanilla Games</h1>
                     <div class="m-5 mx-auto" style="max-width: 400px">
                         <img
-                                src=".images/logo.svg"
+                                src="./images/logo.svg"
                                 alt="fpllefia"
                                 class="img-fluid"
                             />
@@ -56,7 +59,7 @@ export const panel = {
                     <div class="container">
                         <a class="navbar-brand fs-6" href="http://www.fpllefia.com">
                             <img
-                                src=".images/logo.svg"
+                                src="./images/logo.svg"
                                 alt="fpllefia"
                                 width="30"
                                 height="24"
@@ -83,13 +86,13 @@ export const panel = {
 
     script: ()=>{
         console.log('Hola')
-        document.querySelector('#registro').addEventListener('click', () =>{
+        document.querySelector('#registroPanel').addEventListener('click', () =>{
             document.querySelector('header').innerHTML = registro.template
         })
-        document.querySelector('#panel').addEventListener('click', () =>{
+        document.querySelector('#panelPanel').addEventListener('click', () =>{
             document.querySelector('header').innerHTML = panel.template
         })
-        document.querySelector('#login').addEventListener('click', () =>{
+        document.querySelector('#loginPanel').addEventListener('click', () =>{
             document.querySelector('header').innerHTML = login.template
         })
     }

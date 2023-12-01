@@ -7,10 +7,10 @@ document.querySelector('header').innerHTML = header.template
 header.script()
 
 document.querySelector('header').innerHTML = login.template
-login.script()
+
 
 document.querySelector('header').innerHTML = registro.template
-registro.script()
+
 
 document.querySelector('header').innerHTML = panel.template
 panel.script()

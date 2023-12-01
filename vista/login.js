@@ -104,21 +104,12 @@ export const login = {
     `,
 
     script: ()=>{
-        console.log('Hola')
         document.querySelector('#registroLogin').addEventListener('click', () =>{
             document.querySelector('header').innerHTML = registro.template
         })
-        document.querySelector('#panelLogin').addEventListener('click', () =>{
-            document.querySelector('header').innerHTML = panel.template
-        })
-        document.querySelector('#loginLogin').addEventListener('click', () =>{
-            document.querySelector('header').innerHTML = login.template
-        })
+        
         document.querySelector('#enlaceLogin').addEventListener('click', () =>{
             document.querySelector('header').innerHTML = panel.template
-        })
-        document.querySelector('#registrarmeRegistrarme').addEventListener('click', () =>{
-            document.querySelector('header').innerHTML = registro.template
         })
     }
 }

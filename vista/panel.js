@@ -89,9 +89,6 @@ export const panel = {
         document.querySelector('#registroPanel').addEventListener('click', () =>{
             document.querySelector('header').innerHTML = registro.template
         })
-        document.querySelector('#panelPanel').addEventListener('click', () =>{
-            document.querySelector('header').innerHTML = panel.template
-        })
         document.querySelector('#loginPanel').addEventListener('click', () =>{
             document.querySelector('header').innerHTML = login.template
         })

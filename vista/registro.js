@@ -37,9 +37,9 @@ export const registro = {
         <header class="container mt-3">
         <h1 class="text-center">Gestió d'incidències FPLLEFIA</h1>
         <form class="text-center">
-            <button id="registroRegistro" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Registro</button>
-            <button id="panelRegistro" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Panel</button>
-            <button id="loginRegistro" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Login</button>
+            <button id="registroPanel" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Registro</button>
+            <button id="panelPanel" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Panel</button>
+            <button id="loginPanel" type="submit" class="btn btn-primary ms-2 me-2 mt-4 p-2 w-25 btn-dark rounded-5">Login</button>
         </form>
             </header>
             <main>
@@ -55,7 +55,7 @@ export const registro = {
                             <input id="email" type="text" class="form-control" />
                             <label for="pass" class="form-label mt-3">Contraseña:</label>
                             <input id="pass" type="password" class="form-control" />
-                            <button id="enlaceRegistro" class="btn btn-primary w-100 mt-3">Enviar</button>
+                            <button id="enviaraLogin" class="btn btn-primary w-100 mt-3">Enviar</button>
                         </form>
                     </div>
                 </div>
@@ -90,18 +90,14 @@ export const registro = {
     `,
 
     script: ()=>{
-        console.log('Hola')
-        document.querySelector('#registroRegistro').addEventListener('click', () =>{
-            document.querySelector('header').innerHTML = registro.template
-        })
-        document.querySelector('#panelregistro').addEventListener('click', () =>{
+        document.querySelector('#panelPanel').addEventListener('click', () =>{
             document.querySelector('header').innerHTML = panel.template
         })
-        document.querySelector('#loginRegistro').addEventListener('click', () =>{
+        document.querySelector('#loginPanel').addEventListener('click', () =>{
             document.querySelector('header').innerHTML = login.template
         })
-        document.querySelector('#enlaceRegistro').addEventListener('click', () =>{
-            document.querySelector('header').innerHTML = panel.template
+        document.querySelector('#enviaraLogin').addEventListener('click', () =>{
+            document.querySelector('header').innerHTML = login.template
         })
     }
 }
